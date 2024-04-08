@@ -3,125 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
     <style>
         body{
             background-color: #282828;
             display: block;
         }
 h1 {
-  color: rgb(255, 84, 84);
-  background-color: rgb(255, 206, 80);
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255,  84,  84);
+  background-color: rgb(255,  206,  80);
+  font-family:Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif;
   text-align: center;
 }
 
-.flexbox {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 40px;
-  padding: 25px;
-  margin: 5px;
+.navigation{
+border-radius: 5px; height: 50px;
 }
 
-button {
+.navigation_bar{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.page{
+  background-color: rgb(57,  57,  57);
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
+.intro{
+font-family: Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif; 
+color: coral; 
+font-size: 25px;
+}
+p{
+    font-family:'Times New Roman',  Times,  serif;
+    font-size: 30px;
+}
+.titre{
+  color: rgb(255,  133,  93);
+  background-color: rgb(2,  100,  186);
+  padding: 5px;
+  font-weight: bold;
+  font-family:Verdana,  Geneva,  Tahoma,  sans-serif;
+}
+.texte{
+  color:aliceblue;
+  font-family:'Times New Roman',  Times,  serif;
+  font-size: 25px;
+}
+.légende{
+  color: bisque;
+  font-weight: bold;
+}
+.transition
+{
+  font-style: italic; 
+  color: aqua; 
+  background-color: coral; 
+  font-weight: bold; 
+  font-family: 'Trebuchet MS',  'Lucida Sans Unicode',  'Lucida Grande',  'Lucida Sans',  Arial,  sans-serif;
+}
+
+
+.tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
-  text-align: center;
-  height: 150px; 
-  font-family:impact;
+  text-align: justify;
+  font-family:'Times New Roman',  Times,  serif;
   font-size: 25px;
   border: none;
   border-radius: 5px;
-  color: rgb(255, 240, 30);
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: brown;
   font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+
 }
 
-a {
-  color: cornsilk;
-  background-color: black;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(80, 80, 80);
+  color: #fff;
+  text-align: justify;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;  
+  display: grid;
+  grid-template-rows: 150px auto;
+  row-gap: 25px;  
+  min-width: 450px;
+  max-width: 500px;
+  left: 50%;
+	transform: translateX(-25%);
+  align-items: center;
+  vertical-align: center;
+  float: center;
+}
+.div1{
+width: auto;
+height: auto;
+justify-self: center;
+}
+img {
+  height: 150px;
+  width: auto;
+}
+.img2{
+float: center;
+height: 150px;
+width: 125px;
+}
+.div2{
+min-width: 450px;
+max-width: 475px;
+height: auto;
+position: static;
+justify-self: center;
+margin: 15px;
+}
+.tooltip .tooltiptext::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  opacity: 0.4;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+
 }
 
-.texte_1 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/gargantua.jpeg");
-  background-size: auto 250px;
-}
-
-.texte_2 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/gargantua%202.jpg");
-  background-size: auto 250px;
-}
-
-.texte_3 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/gargantuan.jpeg");
-  background-size: auto 250px;
-}
-
-.texte_4 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/Candide_ou_l_optimisme.jpg");
-  background-size: auto 250px;
-}
-
-.texte_5 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/sanji%20pudding.jpg");
-  background-size: auto 270px;
-}
-
-.texte_6 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/manon%20misérable.jpg");
-  background-size: auto 270px;
-}
-
-.texte_7 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/manon.jpg");
-  background-size: auto 270px;
-}
-
-.texte_8 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/père%20goriot.jpg");
-  background-size: auto 250px;
-}
-
-.texte_9 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/danse%20macabre.jpg");
-  background-size: auto 250px;
-}
-
-.texte_10 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/dormeur%20du%20val.jpg");
-  background-size: auto 250px;
-}
-
-.texte_11 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/maldoror.jpg");
-  background-size: auto 250px;
-}
-
-.texte_12 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/alchiumie.jpg");
-  background-size: auto 250px;
-}
-
-.texte_13 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/makarof.jpg");
-  background-size: auto 150px;
-}
-
-.texte_14 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/makarof.jpeg");
-  background-size: auto 150px;
-}
-
-.texte_15 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/caligula.jpeg");
-  background-size: auto 200px;
-}
-
-.texte_16 {
-  background-image: url("https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/le%20malde%20imaginaire.jpg");
-  background-size: auto 250px;
-}
 .outro{
   font-family: Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif; 
   font-size: 25px;
@@ -143,60 +168,127 @@ a {
   grid-template-columns: 3em 9fr ;
   grid-gap: 10px;
 }
-
-.outro_div{
-  display: inline-block;
-  padding-top: 5px;
-  width: 50px;
-}
-
-.info{
-  height: 250px;
-  width: 250px;
-  border-radius: 10px;
-  padding: 30px;
+.red{
   background: linear-gradient(45deg, rgb(255, 61, 61) 12.5%, rgb(57,  57,  57) 12.5%, rgb(57,  57,  57) 37.5%, rgb(255, 61, 61) 37.5%, rgb(255, 61, 61) 62.5%, rgb(57,  57,  57) 62.5%, rgb(57,  57,  57) 87.5%, rgb(255, 61, 61) 87.5%);
   background-size: 20px 20px;
-  margin: auto;
-}
-.info_text{
- width: 250px;
- height: 78px;
- color: coral;
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- text-align: center; 
- background-color: aqua;
- border-radius: 10px;
- padding-top: 10px;
- padding-bottom: 10px;
-
-}
-.senku{
-  width: 250px;
-  height: 150px;
-  border-radius: 10px;
 }
 @media screen and (max-width:1100px) {
-  .flexbox {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 40px;
-  padding: 25px;
-  margin: 5px;
+.intro{
+font-family: Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif; 
+color: coral; 
+font-size: 15px;
 }
-button {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-  text-align: center;
-  height: 175px; 
-  font-family:impact;
-  font-size: 25px;
-  border: none;
-  border-radius: 5px;
-  color: rgb(255, 240, 30);
+h1 {
+color: rgb(255,  84,  84);
+background-color: rgb(255,  206,  80);
+font-family:Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif;
+font-size: 20px;
+text-align: center;
+}
+.auteur{
+  align-content: center;
+  height: 100px ;
+  width: auto ;
+  border-radius: 20px;
+}
+p{
+  font-family:'Times New Roman',  Times,  serif;
+  font-size: 15px;
+}
+
+.titre{
+  color: rgb(255,  133,  93);
+  background-color: rgb(2,  100,  186);
+  padding: 5px;
+  font-weight: bold;
+  font-family:Verdana,  Geneva,  Tahoma,  sans-serif;
+  font-size: 15px;
+}
+.texte{
+  color:aliceblue;
+  font-family:'Times New Roman',  Times,  serif;
+  font-size: 15px;
+}
+.légende{
+  color: bisque;
   font-weight: bold;
 }
+.page {
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-align: justify;
+  font-family:'Times New Roman',  Times,  serif;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: whitesmoke;
+  color: brown;
+  font-weight: bold;
+  margin: 3px;
+  padding: 3px;
+}
+.tooltip .tooltiptext {
+visibility: hidden;
+background-color: rgb(80, 80, 80);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+position: absolute;
+z-index: 1;
+padding: 15px;
+display: grid;
+grid-template-rows: 150px auto;
+row-gap: 25px;  
+min-width: 225px;
+max-width: 225px;
+left: 50%;
+transform: translateX(-25%);
+align-items: center;
+}
+
+.div1{
+position: static;
+float: center;
+justify-self: center;
+}
+img{
+float: center;
+height: 125px;
+width: 200px;
+}
+.img2{
+float: center;
+height: 150px;
+width: 125px;
+}
+.div2{
+min-width: 175px;
+max-width: 200px;
+height: auto;
+position: static;
+justify-self: center;
+}
+.navigation{
+border-radius: 5px; 
+max-width: 50px;
+}
+
+.navigation_bar{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 30px;
+  justify-content: center;
+  padding: 10px;
+}
+
 .outro{
   font-family: Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif; 
   font-size: 10px;
@@ -209,139 +301,522 @@ button {
 }
 .OUTRO
 {
+  display: block;
   font-family: Impact,  Haettenschweiler,  'Arial Narrow Bold',  sans-serif;
   font-size: 15px;
   color: aliceblue;
-  width: 275px;
+  width: 225px;
 }
 .source{
   display: grid;
   grid-template-columns: 50px 250px ;
   grid-gap: 5px;
 }
-.info{
-  height: auto;
-  width: 150px;
-  border-radius: 10px;
-  padding: 30px;
-  background: linear-gradient(45deg, rgb(255, 61, 61) 12.5%, rgb(57,  57,  57) 12.5%, rgb(57,  57,  57) 37.5%, rgb(255, 61, 61) 37.5%, rgb(255, 61, 61) 62.5%, rgb(57,  57,  57) 62.5%, rgb(57,  57,  57) 87.5%, rgb(255, 61, 61) 87.5%);
-  background-size: 20px 20px;
-  margin: auto;
 }
-.info_text{
- width: 150px;
- height: auto;
- color: coral;
- font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- text-align: center; 
- background-color: aqua;
- border-radius: 10px;
- padding-top: 10px;
- padding-bottom: 10px;
-
-}
-.senku{
-  width: 150px;
-  height: 90px;
-  border-radius: 10px;
-}
-}
-
     </style>
 
-    <title>
-    Recueil
-    </title>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/logo%20akatsuki.png"/>
 
-    <h1> Recueil des Textes Français </h1>
+<title> Texte 16 : Malade </title>
+
+<h1> TEXTE 16 : MALADE IMAGINAIRE ACTE III </h1>
 </head>
 <body>
 
-<div class="info">
-  <img src="https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/Dr%20sTone.jpg" class="senku"> 
-  <div class="info_text"> HEY TOI ! POUR VOIR LE PROCÉDÉ SUR TON TEL, N'OUBLIE PAS DE MAINTENIR ENFONCÉ LE PROCÉDÉ, SINON IL NE S'AFFICHE PAS SUR TON TEL ! </div>
+<div class="page">
+
+    <p class="titre" > 
+    
+      Séquence 7 Séance 5 : Troisième  lecture linéaire du Malade Imaginaire (Acte III Scène 5 ; l. 1- 38) 
+        
+    </p>
+
+       
+       <div class="navigation_bar">
+
+        <div>
+        <a href="https://arjunak07.github.io/Texte-15-Caligula/">
+          <img class="navigation" src="https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/revenir.png">
+        </a>
+       </div>
+
+       <div>
+        <a href="https://arjunak07.github.io/Reccueil-des-textes/">
+          <img class="navigation" src="https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/menu%20logo.png">
+        </a>
+       </div>
+
+       </div>     
+       
+
+       </br>
+
+        <img class="auteur" src="https://raw.githubusercontent.com/ArjunaK07/Texte-13-Malade-Acte-1/main/Moliere_2.jpg">
+          <p class="intro">
+            JEAN BAPTISTE POQUELIN (MOLIÈRE): - Molière de son vrai nom Jean Baptiste Poquelin est l'un des plus grands dramaturges français </br>
+            - Il dénonce à travers ses comédies les vices et les mauvais caractères des peuples et des différences sociales de l'époque. </br>
+            - Il veut critiquer les moeurs de sa société. </br>
+            - Il est l'un des rare à parler de toute situation dans ses comédies tout en étant protégé par le roi Louis XIV, qui était son mécène.
+           </br> </br>
+           LE MALADE IMAGINAIRE : - Dernière Pièce de Molière créée en 1673 </br>
+           - Un père bourgeois, Argan, hypocondriaque et tyrannique veut épouser sa fille à un médecin </br>
+           - Mais sa fille Angélique veut épouser son amant Cléant </br>
+           - La servante d'Argan, Toinette, est complice pour s'opposer à ce mariage arrangé et forcé d'Argan
+          </br> </br>
+          PASSAGE : -  Dans la scène précédente, Béralde, le frère d'Argan veut le « guérir de la maladie des médecins » en empêchant M. Fleurant, l'apothicaire, de lui administrer un lavement. L'apothicaire se venge en dépêchant le médecin d'Argan : M. Purgon dont Thomas Diafoirus est le neveu. M. Purgon va alors reprocher à Argan d'être un mauvais patient avant de rompre le projet de mariage avec son neveu.
+  
+                    </br> </br>
+                      <span class="outro">
+                      LECTURE
+                      </span>
+                    </br> </br>
+  
+          PB : ON PEUT ALORS SE DEMANDER COMMENT DANS CE TEXTE ON PEUT VOIR LA SATIRE DE LA MÉDECINE GRÂCE À L'IRONIE ?
+
+        </br></br>
+
+          Plan : I/ (l. 1-20 ) M. Purgon reproche à Argan d'être un mauvais patient </br>
+                 II/ (l. 21-fin ) M. Purgon rompt le projet de mariage </br>
+      </p>
+
+ <div class="texte">
+
+</br></br>
+
+Monsieur 
+
+<button class="tooltip"> Purgon. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/1.jpg"></div><div class="div2"> L'autorité qu'affecte le personnage contraste de manière ridicule avec son nom. L'onomastique participe en effet à la satire de la médecine puisque « Purgon » fait penser à la « purgation » que le médecin voulait mener grâce à un lavement. Le personnage est donc d'emblée caricatural et suscite le rire. </div></span></button> 
+
+- Je viens d’apprendre là-bas, à la porte, 
+
+
+<button class="tooltip"> de jolies nouvelles ;  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/2.jpg"></div><div class="div2"> L'antiphrase ironique de l'expression « de jolies nouvelles » infantilise Argan, comme si M. Purgon réprimandait un enfant irresponsable. </div></span></button> 
+
+<button class="tooltip" style="background-color:aqua; color:indianred;"> qu’on se moque ici de mes ordonnances,  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/3.jpg"></div><div class="div2"> Le médecin M. Purgon surgit et s'emporte contre ce qu'il estime être un manque de respect à l'égard de ses pratiques médicales. L'anaphore du pronom indéfini « on » exprime une accusation sans désigner clairement le coupable. </div></span></button> 
+
+et 
+ 
+<button class="tooltip" style="background-color:aqua; color:indianred;"> qu’on a fait refus de prendre le remède que j’avais prescrit.  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/3.jpg"></div><div class="div2"> Le médecin M. Purgon surgit et s'emporte contre ce qu'il estime être un manque de respect à l'égard de ses pratiques médicales. L'anaphore du pronom indéfini « on » exprime une accusation sans désigner clairement le coupable. </div></span></button> 
+
+
+</br></br>
+
+Argan. - 
+<button class="tooltip"> Monsieur, ce n’est pas…  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/4.jpg"></div><div class="div2"> La réponse d'Argan est immédiatement interrompue (aposiopêse). Le médecin qui coupe la parole à Argan le domine. Le pouvoir réside dans la parole au théâtre et Argan perd toute maîtrise. </div></span></button> 
+ 
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip"> Voilà une hardiesse bien grande, une étrange rébellion d’un malade contre son médecin ! <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/5.jpg"></div><div class="div2"> Les hyperboles et la modalité exclamative expriment la colère du médecin outragé. Ce vocabulaire guerrier joue sur l'image du médecin héros qui brave toutes les maladies mais M. Purgon l'applique comiquement à Argan traité en soldat déserteur. Parler d'un sujet léger sur un ton très sérieux correspond au registre héroi. comique. Celui-ci permet de se moquer de la tyrannie que les médecins exercent sur leurs patients. La susceptibilité excessive de M. Purgon suggère aussi sa malhonnêteté : il ne veut pas se remettre en cause. </div></span></button> 
+
+</br></br>
+
+Toinette. - 
+<button class="tooltip"> Cela est épouvantable. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/6.jpg"></div><div class="div2"> Cette réplique ironique de Toinette soutient le médecin, de manière hypocrite. La servante se venge indirectement de son maître, tout en invitant le médecin à intensifier ses reproches absurdes. Elle participe de la satire de la médecine. </div></span></button> 
+
+ 
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip" style="background-color: goldenrod; color: purple;"> Un clystère que j’avais pris plaisir à composer moi-même. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/7.jpg"></div><div class="div2"> Le blâme d'Argan par M. Purgon forme une antithèse comique avec l'éloge du clystère qu'il prononce. Le médecin utilise en effet un vocabulaire mélioratif et hyperbolique pour évoquer son traitement. Le médecin est plus attentif au remède qu'au patient, dangereux paradoxe dénoncé par Moliere. </div></span></button> 
+
+</br></br>
+
+Argan. - 
+<button class="tooltip" style="background-color:lightblue; color:lightcoral;"> Ce n’est pas moi… <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/8.jpg"></div><div class="div2"> Les répliques d'Argan forment sans cesse des aposiopèses, la scène reposant sur le comique de répétition. Ces interruptions répétées soulignent aussi un comique de situation : le maître tyrannique est désormais dominé par son médecin. Argan accuse inutilement son frère. Le père tyrannique est comiquement réduit à l'état d'enfant grondé. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - <button class="tooltip" style="background-color:goldenrod; color:purple;"> Inventé et formé dans toutes les règles de l’art. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/7.jpg"></div><div class="div2"> Le blâme d'Argan par M. Purgon forme une antithèse comique avec l'éloge du clystère qu'il prononce. Le médecin utilise en effet un vocabulaire mélioratif et hyperbolique pour évoquer son traitement. Le médecin est plus attentif au remède qu'au patient, dangereux paradoxe dénoncé par Moliere. </div></span></button> 
+
+
+ 
+</br></br>
+
+Toinette. -  
+<button class="tooltip" style="background-color:olive; color:orangered;"> Il a tort. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/9.jpg"></div><div class="div2"> Tandis que Toinette soutient malicieusement M. Purgon l'éloge du clystère que compose le médecin est si laudatif qu'il en devient répugnant. Le terme savant et ridicule de « clystère » allié à l'évocation prosaïque des « entrailles » permet à Molière de mobiliser l'humour scatologique propre à la farce populaire. </div></span></button> 
+
+
+
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip" style="background-color:olive; color:orangered;"> Et qui devait faire dans les entrailles un effet merveilleux. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/9.jpg"></div><div class="div2"> Tandis que Toinette soutient malicieusement M. Purgon l'éloge du clystère que compose le médecin est si laudatif qu'il en devient répugnant. Le terme savant et ridicule de « clystère » allié à l'évocation prosaïque des « entrailles » permet à Molière de mobiliser l'humour scatologique propre à la farce populaire. </div></span></button> 
+
+
+ 
+</br></br>
+
+Argan. - 
+<button class="tooltip" style="background-color:lightblue; color:lightcoral;"> Mon frère… <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/8.jpg"></div><div class="div2"> Les répliques d'Argan forment sans cesse des aposiopèses, la scène reposant sur le comique de répétition. Ces interruptions répétées soulignent aussi un comique de situation : le maître tyrannique est désormais dominé par son médecin. Argan accuse inutilement son frère. Le père tyrannique est comiquement réduit à l'état d'enfant grondé. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. -  
+<button class="tooltip"> Le renvoyer avec mépris ! <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/10.jpg"></div><div class="div2"> M. Purgon personnifie le lavement ce qui contraste avec Argan réduit à ses « entrailles ». Molière dénonce ici l'attitude des médecins pour lesquels le corps des patients et réduit à un mécanisme dont ils tirent profit.
+ </div></span></button> 
+
+
+</br></br>
+
+Argan. -  
+<button class="tooltip" style="background-color:lightblue; color:lightcoral;"> C’est lui… <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/8.jpg"></div><div class="div2"> Les répliques d'Argan forment sans cesse des aposiopèses, la scène reposant sur le comique de répétition. Ces interruptions répétées soulignent aussi un comique de situation : le maître tyrannique est désormais dominé par son médecin. Argan accuse inutilement son frère. Le père tyrannique est comiquement réduit à l'état d'enfant grondé. </div></span></button> 
+
+
+
+</br></br>
+
+Monsieur Purgon. -  
+<button class="tooltip" style="background-color:lightsalmon; color:lightgreen;"> C’est une action exorbitante. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/11.jpg"></div><div class="div2"> Le comique repose sur l'exagération caricaturale des reproches du médecin permise par les hyperboles. Le médecin est aussi radical qu'Argan: ce sont deux personnages excessifs qui s'opposent. M. Purgon déforme l'expression « lèse-majesté » révélant qu'il attribue à la médecine une importance égale à celle d'un roi, ce qui est précisément criminel. </div></span></button> 
+
+ 
+</br></br>
+
+Toinette. -  
+<button class="tooltip" style="background-color:lightpink; color:lightcyan;"> Cela est vrai. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/12.jpg"></div><div class="div2"> Toinette approuve encore M. Purgon pour se venger d'Argan et participer à la satire de la médecine. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. -  
+<button class="tooltip" style="background-color:lightsalmon; color:lightgreen;"> Un attentat énorme contre la médecine. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/11.jpg"></div><div class="div2"> Le comique repose sur l'exagération caricaturale des reproches du médecin permise par les hyperboles. Le médecin est aussi radical qu'Argan: ce sont deux personnages excessifs qui s'opposent. M. Purgon déforme l'expression « lèse-majesté » révélant qu'il attribue à la médecine une importance égale à celle d'un roi, ce qui est précisément criminel. </div></span></button> 
+
+
+ 
+</br></br>
+
+Argan. - 
+<button class="tooltip"> Il est cause… <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/13.jpg"></div><div class="div2"> Argan révèle encore son impuissance avec une nouvelle aposiopèse. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. -  
+<button class="tooltip" style="background-color:lightsalmon; color:lightgreen;"> Un crime de lèse-Faculté, qui ne se peut assez punir. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/11.jpg"></div><div class="div2"> Le comique repose sur l'exagération caricaturale des reproches du médecin permise par les hyperboles. Le médecin est aussi radical qu'Argan: ce sont deux personnages excessifs qui s'opposent. M. Purgon déforme l'expression « lèse-majesté » révélant qu'il attribue à la médecine une importance égale à celle d'un roi, ce qui est précisément criminel. </div></span></button> 
+
+
+ 
+</br></br>
+
+Toinette. - 
+<button class="tooltip" style="background-color:lightpink; color:lightcyan;"> Vous avez raison. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/12.jpg"></div><div class="div2"> Toinette approuve encore M. Purgon pour se venger d'Argan et participer à la satire de la médecine. </div></span></button> 
+
+
+
+</br></br>
+
+Monsieur Purgon. - Je vous déclare que je romps 
+
+ 
+<button class="tooltip" style="background-color:salmon; color:indigo;"> commerce <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/14.jpg"></div><div class="div2"> M. Purgon qui se sent profondément humilié rompt solennellement toute relation professionnelle avec Argan et annule même le mariage prévu entre son neveu et Angélique. Le comique de geste est présent grâce au papier de la donation qui doit être déchiré avec emportement sur scène. De manière paradoxale le dénouement heureux de la comédie est amorcé par l'opposant au mariage. Les trois répliques de M. Purgon montrent une gradation dans la volonté du personnage de rompre tout contact avec Argan (« commerce/ alliance/ liaison »). Le parallélisme de construction des subordonnées conjonctives complétives souligne la détermination du médecin. </div></span></button> 
+
+
+
+avec vous. 
+ 
+</br></br>
+
+Argan. -  
+<button class="tooltip" style="background-color:sandybrown; color:orchid;"> C’est mon frère… <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/15.jpg"></div><div class="div2"> Les répliques d'Argan continuent à être niées tandis que Toinette continue d'approuver le médecin. Le père égocentrique est nié dans son existence comme il nia Angélique. Il prononce les mêmes exclamations désespérées que ses filles (ironie du sort). </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - Que je ne veux plus d’
+
+
+<button class="tooltip" style="background-color:salmon; color:indigo;"> alliance <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/14.jpg"></div><div class="div2"> M. Purgon qui se sent profondément humilié rompt solennellement toute relation professionnelle avec Argan et annule même le mariage prévu entre son neveu et Angélique. Le comique de geste est présent grâce au papier de la donation qui doit être déchiré avec emportement sur scène. De manière paradoxale le dénouement heureux de la comédie est amorcé par l'opposant au mariage. Les trois répliques de M. Purgon montrent une gradation dans la volonté du personnage de rompre tout contact avec Argan (« commerce/ alliance/ liaison »). Le parallélisme de construction des subordonnées conjonctives complétives souligne la détermination du médecin. </div></span></button> 
+
+
+
+avec vous. 
+ 
+</br></br>
+
+Toinette. - 
+<button class="tooltip" style="background-color:sandybrown; color:orchid;"> Vous ferez bien.  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/15.jpg"></div><div class="div2"> Les répliques d'Argan continuent à être niées tandis que Toinette continue d'approuver le médecin. Le père égocentrique est nié dans son existence comme il nia Angélique. Il prononce les mêmes exclamations désespérées que ses filles (ironie du sort). </div></span></button> 
+
+
+</br></br>
+
+Monsieur Purgon. - Et que, pour finir toute 
+
+
+<button class="tooltip" style="background-color:salmon; color:indigo;"> liaison <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/14.jpg"></div><div class="div2"> M. Purgon qui se sent profondément humilié rompt solennellement toute relation professionnelle avec Argan et annule même le mariage prévu entre son neveu et Angélique. Le comique de geste est présent grâce au papier de la donation qui doit être déchiré avec emportement sur scène. De manière paradoxale le dénouement heureux de la comédie est amorcé par l'opposant au mariage. Les trois répliques de M. Purgon montrent une gradation dans la volonté du personnage de rompre tout contact avec Argan (« commerce/ alliance/ liaison »). Le parallélisme de construction des subordonnées conjonctives complétives souligne la détermination du médecin. </div></span></button> 
+
+
+
+avec vous, voilà la donation que je faisais à mon neveu, en faveur du mariage. 
+ 
+</br></br>
+
+Argan. -  
+<button class="tooltip"> C’est mon frère qui a fait tout le mal. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/16.jpg"></div><div class="div2"> Argan réussit de manière comique à terminer sa phrase mais celle-ci sera ignorée par M. Purgon. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip"> Mépriser mon clystère !  <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/17.jpg"></div><div class="div2"> Le comique de répétition illustre la surdité du médecin autoritaire qui s'exclame à nouveau et, comme Argan, n'est pas capable d'entendre ce qui n'est pas dans son intérêt. </div></span></button> 
+
+
+ 
+</br></br>
+
+Argan. - 
+<button class="tooltip"> Faites-le venir ; je m’en vais le prendre. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/18.jpg"></div><div class="div2"> Argan semble capituler et déboussolé prend la personnification de M. Purgon au pied de la lettre. C'est du comique de mots. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip" style="background-color:crimson; color:aquamarine;"> Je vous aurais tiré d'affaire avant qu’il fût peu. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/19.jpg"></div><div class="div2"> Les emplois respectifs du conditionnel passé (« aurais tiré «) et du verbe « aller » à l'imparfait servent à marquer un futur proche dans le passé. M. Purgon se présente ainsi comme le sauveur dont on n'a pas voulu. </div></span></button> 
+
+
+ 
+</br></br>
+
+Toinette. -  
+<button class="tooltip" style="background-color:khaki; color:maroon;"> Il ne le mérite pas. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/20.jpg"></div><div class="div2"> Toinette continue d'amplifier la discorde en se moquant ironiquement des deux personnages tandis que les exclamations d'Argan insistent sur le dialogue de sourd que le médecin entretient avec son patient. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - 
+<button class="tooltip" style="background-color:crimson; color:aquamarine;"> J’allais nettoyer votre corps, et en évacuer entièrement les mauvaises humeurs. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/19.jpg"></div><div class="div2"> Les emplois respectifs du conditionnel passé (« aurais tiré «) et du verbe « aller » à l'imparfait servent à marquer un futur proche dans le passé. M. Purgon se présente ainsi comme le sauveur dont on n'a pas voulu. </div></span></button> 
+
+
+</br></br>
+
+Argan. -  
+<button class="tooltip" style="background-color:khaki; color:maroon;"> Ah ! Mon frère ! <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/20.jpg"></div><div class="div2"> Toinette continue d'amplifier la discorde en se moquant ironiquement des deux personnages tandis que les exclamations d'Argan insistent sur le dialogue de sourd que le médecin entretient avec son patient. </div></span></button> 
+
+
+ 
+</br></br>
+
+Monsieur Purgon. - Et je ne voulais plus qu’
+
+
+<button class="tooltip"> une douzaine <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/21.jpg"></div><div class="div2"> Le statut de sauveur du médecin se révèle comique et contradictoire. La tournure restrictive contraste avec le nombre exorbitant de médecines nécessaires évoquées par l'approximation « une douzaine ». </div></span></button> 
+
+
+de médecines pour 
+
+ 
+<button class="tooltip"> vider le fond du sac. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/22.jpg"></div><div class="div2"> L'expression « vider le fond du sac » joue sur une polysémie comique: il peut s'agir d'une métaphore scatologique pour évoquer les effets du lavement mais aussi la bourse d'Argan que M. Purgon vide de son argent. De manière ironique le médecin se trahit. </div></span></button> 
+
+
+</br></br>
+
+Toinette. -  
+<button class="tooltip" style="background-color:khaki; color:maroon;"> Il est indigne de vos soins. <span class="tooltiptext"><div class="div1"><img src="https://raw.githubusercontent.com/ArjunaK07/Texte-16-Malade-Acte-3/main/20.jpg"></div><div class="div2"> Toinette continue d'amplifier la discorde en se moquant ironiquement des deux personnages tandis que les exclamations d'Argan insistent sur le dialogue de sourd que le médecin entretient avec son patient. </div></span></button> 
+
+
+</br></br>
+
 </div>
+ 
+<p class="légende">
+  Molière (Jean-Baptiste Poclin), Le Malade Imaginaire, Acte II, 1673
+</p>
 
-<div class="flexbox">
+<p class="intro">
+  Conclusion :
+  - Les reproches que M. Purgon adresse à Argan, avec le soutien hypocrite de Toinette, expriment bien une satire de la médecine. </br>
+  - Le médecin manifeste en effet un tel orgueil qu'il décrédibilise sa profession. </br>
+  - La scène est également comique car Argan, personnage tyrannique, est complètement dominé par un autre tyran qui annule le mariage de sa fille. </br> </br>
+               
+  Ouverture : 
+  - La satire des médecins déid présente dans la scène S de l'acte Il avec la présentation de Thomas Diafolrus a
+  Argan et Angélique atteint ici son paroxysme. </br>
+  - La scène est également importante pour l'ensemble de la pièce car elle permet le dénouement favorable de cette comédie de mœurs en faisant échec au mariage entre Angélique et Thomas Diafoirus.
+</br> </br>
 
-<button class="texte_1"> <a href="https://arjunak07.github.io/Texte-1-La-Naissance-de-Gargantua/"> TEXTE 1 </a> 
+  <p class="outro">
+  QUESTION GRAMMAIRE : </br>
+Etudiez le verbe « aller » dans cette citation : « je m'en vais le prendre. »
+</br> </br>
+- Le verbe « aller » est conjugué à la première personne du singulier de l'indicatif présent. </br>
+- Il a une valeur de futur proche. </br>
+
+</p>
+    </p>
+
+ <button class="tooltip" style="background-color: chartreuse; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:indianred;">
+    Procédés Littéraires et Stylistiques = 22
 </button>
 
+</br></br>
 
-<button class="texte_2"> <a href="https://arjunak07.github.io/Texte-2-L-eduaction-de-Gargantua/"> TEXTE 2 </a> 
-</button>
+    <p class="texte">
+
+TEXTE ORIGINAL: </br> </br>
+
+Scène 5 MONSIEUR PURGON, ARGAN, BÉRALDE, TOINETTE. 
+ 
+</br></br>
+
+Monsieur Purgon. - Je viens d’apprendre là-bas, à la porte, de jolies nouvelles ; qu’on se moque ici de mes ordonnances, et qu’on a fait refus de prendre le remède que j’avais prescrit. 
+ 
+</br></br>
+
+Argan. - Monsieur, ce n’est pas… 
+ 
+</br></br>
+
+Monsieur Purgon. - Voilà une hardiesse bien grande, une étrange rébellion d’un malade contre son médecin ! 
+ 
+</br></br>
+
+Toinette. - Cela est épouvantable. 
+ 
+</br></br>
+
+Monsieur Purgon. - Un clystère que j’avais pris plaisir à composer moi-même. 
+ 
+</br></br>
+
+Argan. - Ce n’est pas moi… 
+ 
+</br></br>
+
+Monsieur Purgon. - Inventé et formé dans toutes les règles de l’art. 
+ 
+</br></br>
+
+Toinette. - Il a tort. 
+ 
+</br></br>
+
+Monsieur Purgon. - Et qui devait faire dans les entrailles un effet merveilleux. 
+ 
+</br></br>
+
+Argan. - Mon frère… 
+ 
+</br></br>
+
+Monsieur Purgon. - Le renvoyer avec mépris ! 
+ 
+</br></br>
+
+Argan. - C’est lui… 
+ 
+</br></br>
+
+Monsieur Purgon. - C’est une action exorbitante. 
+ 
+</br></br>
+
+Toinette. - Cela est vrai. 
+ 
+</br></br>
+
+Monsieur Purgon. - Un attentat énorme contre la médecine. 
+ 
+</br></br>
+
+Argan. - Il est cause… 
+ 
+</br></br>
+
+Monsieur Purgon. - Un crime de lèse-Faculté, qui ne se peut assez punir. 
+ 
+</br></br>
+
+Toinette. - Vous avez raison. 
+
+</br></br>
+
+Monsieur Purgon. - Je vous déclare que je romps commerce avec vous. 
+ 
+</br></br>
+
+Argan. - C’est mon frère… 
+ 
+</br></br>
+
+Monsieur Purgon. - Que je ne veux plus d’alliance avec vous. 
+ 
+</br></br>
+
+Toinette. - Vous ferez bien. 
+ 
+</br></br>
+
+Monsieur Purgon. - Et que, pour finir toute liaison avec vous, voilà la donation que je faisais à mon neveu, en faveur du mariage. 
+ 
+</br></br>
+
+Argan. - C’est mon frère qui a fait tout le mal. 
+ 
+</br></br>
+
+Monsieur Purgon. - Mépriser mon clystère ! 
+ 
+</br></br>
+
+Argan. - Faites-le venir ; je m’en vais le prendre. 
+ 
+</br></br>
+
+Monsieur Purgon. - Je vous aurais tiré d'affaire avant qu’il fût peu. 
+ 
+</br></br>
+
+Toinette. - Il ne le mérite pas. 
+ 
+</br></br>
+
+Monsieur Purgon. - J’allais nettoyer votre corps, et en évacuer entièrement les mauvaises humeurs. 
+ 
+</br></br>
+
+Argan. - Ah ! Mon frère ! 
+ 
+</br></br>
+
+Monsieur Purgon. - Et je ne voulais plus qu’une douzaine de médecines pour vider le fond du sac. 
+ 
+</br></br>
+
+Toinette. - Il est indigne de vos soins. 
+
+</br></br>
 
 
-<button class="texte_3"> <a href="https://arjunak07.github.io/Texte-3-L-eduaction-humaniste/"> TEXTE 3 </a> 
-</button>
+    </p>
 
+    </div>
 
-<button class="texte_4"> <a href="https://arjunak07.github.io/Texte-4-Candide/"> TEXTE 4 </a> 
-</button>
+    <h6 style="color: indianred; display: block; ">
+      ©©© • FAIT PAR ARJUNAA d'après les cours de Mr. Badelon • ©©©
+    </h6>
 
+    <div class="source">
 
-<button class="texte_5"> <a href="https://arjunak07.github.io/Texte-5-Manon-Lescaut-Eglise/"> TEXTE 5 </a> 
-</button>
-
-
-<button class="texte_6"> <a href="https://arjunak07.github.io/Texte-6-Manon-Lescaut-Evasion/"> TEXTE 6 </a> 
-</button>
-
-
-<button class="texte_7"> <a href="https://arjunak07.github.io/Texte-7-Manon-Lescaut-Mort/"> TEXTE 7 </a> 
-</button>
-
-
-<button class="texte_8"> <a href="https://arjunak07.github.io/Texte-8-Pere-Goriot/"> TEXTE 8 </a> 
-</button>
-
-
-<button class="texte_9"> <a href="https://arjunak07.github.io/Texte-9-Bal/"> TEXTE 9 </a> 
-</button>
-
-
-<button class="texte_10"> <a href="https://arjunak07.github.io/Texte-10-Dormeur/"> TEXTE 10 </a> 
-</button>
-
-
-<button class="texte_11"> <a href="https://arjunak07.github.io/Texte-11-Maldoror/"> TEXTE 11 </a> 
-</button>
-
-
-<button class="texte_12"> <a href="https://arjunak07.github.io/Texte-12-Alchimie/"> TEXTE 12 </a> 
-</button>
-
-
-<button class="texte_13"> <a href="https://arjunak07.github.io/Texte-13-Malade-Acte-1/"> TEXTE 13 </a> 
-</button>
-
-
-<button class="texte_14"> <a href="https://arjunak07.github.io/Texte-14-Malade-Acte-2/"> TEXTE 14 </a> 
-</button>
-
-
-<button class="texte_15"> <a href="https://arjunak07.github.io/Texte-15-Caligula/"> TEXTE 15 </a> 
-</button>
-
-
-<button class="texte_16"> <a href="https://arjunak07.github.io/Texte-16-Malade-Acte-3/"> TEXTE 16 </a> 
-</button>
-
-</div>
-<div class="source">
-
-      <div>
+      <div class="intro_div">
         <a href="https://arjunak07.github.io/Accueil-Premiere/"> <img class="logo_akatsuki" src="https://raw.githubusercontent.com/ArjunaK07/Reccueil-des-textes/main/logo%20akatsuki.png"> </a>
       </div>
     
-      <div class="div2">
+      <div class="outro_div">
         <span class="OUTRO">
           FAIT PAR L'AKATSUKI DES CODEURS, PROPULSÉ PAR LE LYCÉE ANDRÉ MALRAUX
-      </span>
+        </span>
       </div>
       
     </div>
-
 
 </body>
 </html>
